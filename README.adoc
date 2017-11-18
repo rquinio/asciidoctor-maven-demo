@@ -1,5 +1,7 @@
 = asciidoctor-maven-demo
 
+image:https://travis-ci.org/rquinio/asciidoctor-maven-demo.svg?branch=master["Build Status", link="https://travis-ci.org/rquinio/asciidoctor-maven-demo"]
+
 A small example that demonstrates how http://asciidoctor.org/[Asciidoctor] can be used in Maven to generate multiple backends from shared sources:
 
 * A multi-page *https://rquinio.github.io/asciidoctor-maven-demo/index.html[Maven site]* with a navigation sidebar, using https://github.com/asciidoctor/asciidoctor-maven-plugin[asciidoctor-maven-plugin] Doxia asciidoc sink.
