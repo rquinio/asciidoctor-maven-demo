@@ -1,0 +1,22 @@
+= asciidoctor-maven-demo
+
+A small example that demonstrates how http://asciidoctor.org/[Asciidoctor] can be used in Maven to generate multiple backends from shared sources:
+
+* A multi-page *https://rquinio.github.io/asciidoctor-maven-demo/index.html[Maven site]* with a navigation sidebar, using [asciidoctor-maven-plugin] Doxia asciidoc sink.
+* A single-page *https://rquinio.github.io/asciidoctor-maven-demo/handbook/handbook.html[HTML handbook]*, using [asciidoctor-maven-plugin]
+* A *https://rquinio.github.io/asciidoctor-maven-demo/handbook/handbook.pdf[PDF handbook]*, using https://github.com/asciidoctor/asciidoctor-pdf[asciidoctor-pdf]
+* A *https://rquinio.github.io/asciidoctor-maven-demo/slides/slides.html[reveal.js presentation]*, using https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-reveal.js]
+
+This is inspired by https://github.com/asciidoctor/asciidoctor-maven-examples[asciidoctor-maven-examples], but rather than having multiple sub-modules, it generates multiple outputs inside a single project, re-using the same base material.
+
+Interesting bits:
+
+* Fallbacking from fonts to images for admonition on the Maven site
+* Using leveloffset with includes, to integrate individual fragments
+* Using ifdef::backend-* when content is only needed for a specific backend
+* Including source code and linking to a generated Javadoc
+* Including images from sub-templates and relative paths (buggy)
+
+To build the project:
+
+> mvn clean site

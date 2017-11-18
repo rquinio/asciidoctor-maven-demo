@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Asciidoc test">
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-fluido-skin</artifactId>
+    <version>1.6</version>
+  </skin>
+  <!--  
+  <skin>
+    <groupId>lt.velykis.maven.skins</groupId>
+    <artifactId>reflow-maven-skin</artifactId>
+    <version>1.1.1</version>
+  </skin>
+  -->
+  <custom>
+    <reflowSkin>
+      <theme>defaukt</theme>
+      <toc>sidebar</toc>
+      <pages>
+        <index>
+          <!-- index.html sections (examples of all available sections) -->
+          <sections>
+            <!--<carousel /> -->
+            <!--<sidebar /> -->
+            <body />
+            <!-- <columns>3</columns> -->
+          </sections>
+        </index>
+      </pages>
+    </reflowSkin>
+  </custom>
+  <body>
+    <links>
+      <item name="Asciidoctor" href="http://asciidoctor.org/" />
+    </links>
+    <menu name="Site content">
+      <item name="Home page" href="index.html" />
+      <item name="Topic 1" href="topic1/topic1.html" />
+      <item name="Topic 2" href="topic2/topic2.html" />
+    </menu>
+    
+    <menu ref="reports"/>
+  </body>
+</project>

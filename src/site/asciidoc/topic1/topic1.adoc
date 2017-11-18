@@ -1,0 +1,41 @@
+= Topic 1
+:iconsdir: ../images/icons
+:imagesdir: ../
+
+Topic 1 is very important.
+
+image::images/asciidoctor.png[]
+
+== Introduction
+
+BlaBla
+
+== Details
+
+BlaBla
+
+NOTE: Something to note.
+
+== Inline source
+
+[source,java]
+----
+public class HelloWorld { // <1>
+  public static void main(String[] args) { // <2>
+    // Prints "Hello, World" to the terminal window. Here is some very large comment that should cause an overflow
+    System.out.println("Hello, World");
+  }
+}
+----
+<1> The class name
+<2> The main method
+
+== Referenced source
+
+[source,java,indent=0,tabsize=2]
+----
+include::{sourcedir}/HelloWorld.java[tag=main]
+----
+<1> The main method
+
+TIP: Also see the link:../apidocs/HelloWorld.html[Javadoc].

@@ -1,0 +1,22 @@
+= Maven site
+
+NOTE: This is a nice Maven site, but you should also try out the link:handbook/handbook.html[HTML handbook], link:handbook/handbook.pdf[PDF handbook] or link:slides/slides.html[reveal.js presentation] versions.
+
+You can navigate the documentation by using the sidebar.
+
+image::images/asciidoctor.png[]
+
+
+== Admonitions
+
+WARNING: Warning
+
+TIP: Tip
+
+IMPORTANT: Important
+
+CAUTION: Caution
+
+== Custom variables
+
+Awesome library version: {awesome-version}.

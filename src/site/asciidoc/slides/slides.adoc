@@ -1,0 +1,39 @@
+= Presentation
+:author: Author
+:revdate: Date
+
+image::images/asciidoctor.png[background, size=cover]
+
+[background-color="yellow"]
+== Keys
+
+* Press the arrow keys to navigate.
+
+* Press the `*esc*` key to get an overview of your slides.
+
+* Press the `*s*` key to access speaker notes.
+
+* Press `*b*` or `*.*` to blank your current screen.
+
+[NOTE.speaker]
+--
+You've unlocked the super secret notes area.
+Neat huh?
+--
+
+[background-color="green"]
+include::../topic1/topic1.adoc[leveloffset=+1]
+
+[background-color="black"]
+include::../topic2/topic2.adoc[leveloffset=+1]
+
+== Conclusion
+
+WARNING: This is not the end !
+
+You should also try out:
+
+[%step]
+* the link:../index.html[Maven site] image:images/maven.png[Maven,100,50]
+* the link:../handbook/handbook.html[HTML handbook] image:images/html5.png[HTML5,50,50]
+* the link:../handbook/handbook.pdf[PDF handbook] image:images/pdf.png[PDF,50,50]

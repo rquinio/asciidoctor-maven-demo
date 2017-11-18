@@ -1,0 +1,15 @@
+= Topic 2
+:iconsdir: ../images/icons
+
+Topic 2 is not so important.
+
+
+== Introduction
+
+BlaBla
+
+== Details
+
+BlaBla
+
+NOTE: Something to note.
