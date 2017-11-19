@@ -6,10 +6,6 @@ Demo the usage of attributes.
 
 * backend: {backend}
 * asciidoctor-version: {asciidoctor-version}
-* docfile: {docfile}
-* outfile: {outfile}
-* imagesdir: {imagesdir}
-* outimagesdir: {outimagesdir}
 
 == Custom attributes
 

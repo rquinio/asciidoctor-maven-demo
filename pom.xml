@@ -62,6 +62,25 @@
         <groupId>org.asciidoctor</groupId>
         <artifactId>asciidoctor-maven-plugin</artifactId>
         <version>${asciidoctor-maven-plugin.version}</version>
+        <configuration>
+          <!-- Common configuration to all backends -->
+          <sourceHighlighter>coderay</sourceHighlighter>
+          <attributes>
+            <coderay-css>class</coderay-css>
+            <icons>font</icons>
+            <revnumber>${project.version}</revnumber>
+            <revdate>${maven.build.timestamp}</revdate>
+            <organization>${project.organization.name}</organization>
+            <awesome-version>${awesome.version}</awesome-version>
+            <project-version>${project.version}</project-version>
+            <sourcedir>${basedir}/src/main/java</sourcedir>
+            <imagesoutdir>${project.build.directory}/site</imagesoutdir>
+            <siteurl>${project.url}</siteurl>
+          </attributes>
+          <requires>
+            <require>asciidoctor-diagram</require>
+          </requires>
+        </configuration>
         <executions>
           <execution>
             <id>output-html</id>
@@ -70,25 +89,11 @@
               <goal>process-asciidoc</goal>
             </goals>
             <configuration>
+              <backend>html5</backend>
               <sourceDirectory>src/site/asciidoc/handbook</sourceDirectory>
               <outputDirectory>target/site/handbook</outputDirectory>
               <!-- Move out of /handbook folder -->
               <imagesDir>../</imagesDir>
-              <backend>html5</backend>
-              <sourceHighlighter>coderay</sourceHighlighter>
-              <attributes>
-                <revnumber>${project.version}</revnumber>
-                <revdate>${maven.build.timestamp}</revdate>
-                <organization>${project.organization.name}</organization>
-                <awesome-version>${awesome.version}</awesome-version>
-                <coderay-css>class</coderay-css>
-                <icons>font</icons>
-                <sourcedir>${basedir}/src/main/java</sourcedir>
-                <imagesoutdir>${project.build.directory}/site</imagesoutdir>
-              </attributes>
-              <requires>
-                <require>asciidoctor-diagram</require>
-              </requires>
             </configuration>
           </execution>
           <execution>
@@ -98,30 +103,17 @@
               <goal>process-asciidoc</goal>
             </goals>
             <configuration>
+              <backend>pdf</backend>
               <sourceDirectory>src/site/asciidoc/handbook</sourceDirectory>
               <outputDirectory>target/site/handbook</outputDirectory>
               <!-- Need an absolute path for pdfs -->
               <imagesDir>${project.build.directory}/site</imagesDir>
               <!-- <imagesDir>${basedir}/src/site/resources</imagesDir> -->
-              <backend>pdf</backend>
-              <sourceHighlighter>coderay</sourceHighlighter>
               <attributes>
-                <revnumber>${project.version}</revnumber>
-                <revdate>${maven.build.timestamp}</revdate>
-                <organization>${project.organization.name}</organization>
-                <awesome-version>${awesome.version}</awesome-version>
-                <coderay-css>class</coderay-css>
-                <icons>font</icons>
                 <pagenums />
                 <toc />
                 <title-logo-image>${basedir}/src/site/resources/images/asciidoctor.png</title-logo-image>
-                <sourcedir>${basedir}/src/main/java</sourcedir>
-                <siteurl>${project.url}</siteurl>
-                <imagesoutdir>${project.build.directory}/site</imagesoutdir>
               </attributes>
-              <requires>
-                <require>asciidoctor-diagram</require>
-              </requires>
             </configuration>
           </execution>
           <execution>
@@ -131,28 +123,19 @@
               <goal>process-asciidoc</goal>
             </goals>
             <configuration>
+              <backend>revealjs</backend>
               <sourceDirectory>src/site/asciidoc/slides</sourceDirectory>
               <outputDirectory>${project.slides.directory}</outputDirectory>
               <!-- Move out of /slides folder -->
               <imagesDir>../</imagesDir>
-              <backend>revealjs</backend>
               <templateDir>${project.build.directory}/asciidoctor-reveal.js-${asciidoctor-revealjs.version}/templates/slim</templateDir>
-              <sourceHighlighter>coderay</sourceHighlighter>
               <attributes>
                 <revealjsdir>https://cdnjs.cloudflare.com/ajax/libs/reveal.js/${revealjs.version}</revealjsdir>
                 <!--<revealjsdir>reveal.js-${revealjs.version}</revealjsdir> -->
                 <revealjs_theme>white</revealjs_theme>
                 <revealjs_transition>slide</revealjs_transition>
                 <revealjs_slideNumber>true</revealjs_slideNumber>
-                <coderay-css>class</coderay-css>
-                <icons>font</icons>
-                <project-version>${project.version}</project-version>
-                <sourcedir>${basedir}/src/main/java</sourcedir>
-                <imagesoutdir>${project.build.directory}/site</imagesoutdir>
               </attributes>
-              <requires>
-                <require>asciidoctor-diagram</require>
-              </requires>
             </configuration>
           </execution>
         </executions>
@@ -186,7 +169,7 @@
               <icons>image</icons>
               <sourcedir>${basedir}/src/main/java</sourcedir>
               <imagesoutdir>${project.build.directory}/site</imagesoutdir>
-              <!--  Allows to differentiate backend-html5 site output -->
+              <!-- Allows to differentiate backend-html5 site output -->
               <site>true</site>
             </attributes>
             <requires>
