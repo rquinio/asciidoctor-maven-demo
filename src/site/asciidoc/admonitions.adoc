@@ -1,0 +1,13 @@
+= Admonitions
+
+Demo the display of icons as images or fonts.
+
+NOTE: Note
+
+WARNING: Warning
+
+TIP: Tip
+
+IMPORTANT: Important
+
+CAUTION: Caution

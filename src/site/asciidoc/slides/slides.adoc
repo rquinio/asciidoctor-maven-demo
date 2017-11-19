@@ -21,11 +21,20 @@ You've unlocked the super secret notes area.
 Neat huh?
 --
 
+[background-color="purple"]
+include::../attributes.adoc[leveloffset=+1]
+
+[background-color="orange"]
+include::../admonitions.adoc[leveloffset=+1]
+
 [background-color="green"]
-include::../topic1/topic1.adoc[leveloffset=+1]
+include::../source.adoc[leveloffset=+1]
 
 [background-color="black"]
-include::../topic2/topic2.adoc[leveloffset=+1]
+include::../diagrams.adoc[leveloffset=+1]
+
+[background-color="pink"]
+include::../sub-folder/sub.adoc[leveloffset=+1]
 
 == Conclusion
 
@@ -34,6 +43,6 @@ WARNING: This is not the end !
 You should also try out:
 
 [%step]
-* the link:../index.html[Maven site] image:images/maven.png[Maven,100,50]
-* the link:../handbook/handbook.html[HTML handbook] image:images/html5.png[HTML5,50,50]
-* the link:../handbook/handbook.pdf[PDF handbook] image:images/pdf.png[PDF,50,50]
+* the *link:../handbook/handbook.html[HTML handbook]* version image:images/html5.png[HTML5,40,40]
+* the *link:../index.html[Maven site]* image:images/maven.png[Maven,80,40]
+* the *link:../handbook/handbook.pdf[PDF handbook]* version image:images/pdf.png[PDF,40,40]

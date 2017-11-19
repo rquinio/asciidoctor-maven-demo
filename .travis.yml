@@ -1,2 +1,7 @@
 language: java
+
+before_install:
+# Install dot executable for diagrams
+ - "sudo apt-get install graphviz"
+
 script: mvn site

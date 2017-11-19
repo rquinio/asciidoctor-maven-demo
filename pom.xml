@@ -18,7 +18,7 @@
     <!-- Maven property exported as an ascidoc custom attribute -->
     <awesome.version>1.2</awesome.version>
   </properties>
-  
+
   <url>https://rquinio.github.io/asciidoctor-maven-demo</url>
 
   <build>
@@ -84,7 +84,11 @@
                 <coderay-css>class</coderay-css>
                 <icons>font</icons>
                 <sourcedir>${basedir}/src/main/java</sourcedir>
+                <imagesoutdir>${project.build.directory}/site</imagesoutdir>
               </attributes>
+              <requires>
+                <require>asciidoctor-diagram</require>
+              </requires>
             </configuration>
           </execution>
           <execution>
@@ -96,7 +100,9 @@
             <configuration>
               <sourceDirectory>src/site/asciidoc/handbook</sourceDirectory>
               <outputDirectory>target/site/handbook</outputDirectory>
-              <imagesDir>${basedir}/src/site/resources</imagesDir>
+              <!-- Need an absolute path for pdfs -->
+              <imagesDir>${project.build.directory}/site</imagesDir>
+              <!-- <imagesDir>${basedir}/src/site/resources</imagesDir> -->
               <backend>pdf</backend>
               <sourceHighlighter>coderay</sourceHighlighter>
               <attributes>
@@ -111,7 +117,11 @@
                 <title-logo-image>${basedir}/src/site/resources/images/asciidoctor.png</title-logo-image>
                 <sourcedir>${basedir}/src/main/java</sourcedir>
                 <siteurl>${project.url}</siteurl>
+                <imagesoutdir>${project.build.directory}/site</imagesoutdir>
               </attributes>
+              <requires>
+                <require>asciidoctor-diagram</require>
+              </requires>
             </configuration>
           </execution>
           <execution>
@@ -130,7 +140,7 @@
               <sourceHighlighter>coderay</sourceHighlighter>
               <attributes>
                 <revealjsdir>https://cdnjs.cloudflare.com/ajax/libs/reveal.js/${revealjs.version}</revealjsdir>
-                <!--<revealjsdir>reveal.js-${revealjs.version}</revealjsdir>-->
+                <!--<revealjsdir>reveal.js-${revealjs.version}</revealjsdir> -->
                 <revealjs_theme>white</revealjs_theme>
                 <revealjs_transition>slide</revealjs_transition>
                 <revealjs_slideNumber>true</revealjs_slideNumber>
@@ -138,7 +148,11 @@
                 <icons>font</icons>
                 <project-version>${project.version}</project-version>
                 <sourcedir>${basedir}/src/main/java</sourcedir>
+                <imagesoutdir>${project.build.directory}/site</imagesoutdir>
               </attributes>
+              <requires>
+                <require>asciidoctor-diagram</require>
+              </requires>
             </configuration>
           </execution>
         </executions>
@@ -171,10 +185,16 @@
               <coderay-css>style</coderay-css>
               <icons>image</icons>
               <sourcedir>${basedir}/src/main/java</sourcedir>
+              <imagesoutdir>${project.build.directory}/site</imagesoutdir>
+              <!--  Allows to differentiate backend-html5 site output -->
+              <site>true</site>
             </attributes>
+            <requires>
+              <require>asciidoctor-diagram</require>
+            </requires>
           </asciidoc>
           <moduleExcludes>
-            <asciidoc>**/handbook/*.adoc,**/slides/*.adoc</asciidoc>
+            <asciidoc>**/_*.adoc,**/handbook/*.adoc,**/slides/*.adoc</asciidoc>
           </moduleExcludes>
         </configuration>
         <dependencies>
@@ -183,6 +203,11 @@
             <groupId>org.asciidoctor</groupId>
             <artifactId>asciidoctor-maven-plugin</artifactId>
             <version>${asciidoctor-maven-plugin.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj-diagram</artifactId>
+            <version>1.5.4.1</version>
           </dependency>
           <dependency>
             <groupId>lt.velykis.maven.skins</groupId>

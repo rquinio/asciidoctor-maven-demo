@@ -1,20 +1,6 @@
-= Topic 1
-:iconsdir: ../images/icons
-:imagesdir: ../
+= Source code
 
-Topic 1 is very important.
-
-image::images/asciidoctor.png[]
-
-== Introduction
-
-BlaBla
-
-== Details
-
-BlaBla
-
-NOTE: Something to note.
+Demo source code inclusion.
 
 == Inline source
 

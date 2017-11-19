@@ -1,0 +1,19 @@
+= Sub-document
+:iconsdir: ../images/icons
+:imagesdir: ../
+
+Demo the inclusion of sub-documents, with relative paths for images/icons/diagrams.
+
+[%conceal]
+== Inclusions
+
+NOTE: Note
+
+image::images/asciidoctor.png[]
+
+[graphviz, dot-trivial-example, svg]
+----
+digraph g {
+    a -> b
+}
+----

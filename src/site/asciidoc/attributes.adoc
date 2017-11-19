@@ -1,0 +1,25 @@
+= Attributes
+
+Demo the usage of attributes.
+
+== Environment attributes 
+
+* backend: {backend}
+* asciidoctor-version: {asciidoctor-version}
+* docfile: {docfile}
+* outfile: {outfile}
+* imagesdir: {imagesdir}
+* outimagesdir: {outimagesdir}
+
+== Custom attributes
+
+Variables can be passed as custom attributes, initialized from a maven property (no maven filtering of .adoc files needed)
+
+[source, xml]
+----
+<attributes>
+  <awesome-version>${awesome.version}</awesome-version>
+</attributes>
+----
+
+Awesome library version: *{awesome-version}*.

@@ -4,20 +4,43 @@
 
 image::images/asciidoctor.png[]
 
+[NOTE]
+.More
+====
 ifdef::backend-html5[]
-NOTE: This is a nice HTML handbook, but you should also try out the link:../index.html[Maven site], link:handbook.pdf[PDF handbook] or link:../slides/slides.html[reveal.js presentation] versions.
-endif::[]
+This is a nice HTML handbook. You should also try out:
 
+* the *link:../index.html[Maven site]* image:images/maven.png[Maven,40,20]
+* the *link:handbook.pdf[PDF handbook]* version image:images/pdf.png[PDF,20,20]
+* the *link:../slides/slides.html[reveal.js presentation]* version image:images/slides.png[Slides,20,20]
+endif::[]
 ifdef::backend-pdf[]
-NOTE: This is a nice PDF handbook, but you should also try out the link:{siteurl}/index.html[Maven site] or link:{siteurl}/handbook/handbook.html[HTML handbook] versions.
+This is a nice PDF handbook, but you should also try out:
+
+* the *link:{siteurl}/index.html[Maven site]* version image:images/maven.png[Maven,40,20]
+* the *link:{siteurl}/handbook/handbook.html[HTML handbook]* version image:images/html5.png[HTML5,20,20]
+* the *link:{siteurl}/slides/slides.html[revealjs slides]* version image:images/slides.png[Slides,20,20]
 endif::[]
+====
 
 <<<
 
-include::../topic1/topic1.adoc[leveloffset=+1]
+include::../attributes.adoc[leveloffset=+1]
 
 <<<
 
-include::../topic2/topic2.adoc[leveloffset=+1]
+include::../admonitions.adoc[leveloffset=+1]
+
+<<<
+
+include::../source.adoc[leveloffset=+1]
+
+<<<
+
+include::../diagrams.adoc[leveloffset=+1]
+
+<<<
+
+include::../sub-folder/sub.adoc[leveloffset=+1]
 
 <<<
