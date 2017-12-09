@@ -13,6 +13,13 @@
   </skin>
   -->
   <custom>
+    <fluidoSkin>
+      <gitHub>
+        <projectId>rquinio/asciidoctor-maven-demo</projectId>
+        <ribbonOrientation>right</ribbonOrientation>
+        <ribbonColor>red</ribbonColor>
+      </gitHub>
+    </fluidoSkin>
     <reflowSkin>
       <theme>defaukt</theme>
       <toc>sidebar</toc>
@@ -31,7 +38,7 @@
   </custom>
   <bannerLeft>
     <name>Asciidoctor Maven Demo</name>
-    <src>images/asciidoctor.png</src>
+    <src>images/asciidoctor-small.png</src>
     <href>./index.html</href>
   </bannerLeft>
   <body>
