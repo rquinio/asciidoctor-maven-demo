@@ -6,7 +6,5 @@ before_install:
 
 script: mvn site
 
-after_success:
- - if [ "$TRAVIS_REPO_SLUG" == "rquinio/asciidoctor-maven-demo" ] && [ ${TRAVIS_PULL_REQUEST} = "false" ] && [ "$TRAVIS_BRANCH" = "master" ]; then
-   deploy.sh
-   fi
+after_success: 
+ - deploy.sh
