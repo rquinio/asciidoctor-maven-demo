@@ -52,6 +52,7 @@
       <item name="Source" href="source.html" />
       <item name="Diagrams" href="diagrams.html" />
       <item name="Sub-document" href="sub-folder/sub.html" />
+      <item name="Links" href="links.html" />
     </menu>
     
     <menu ref="reports"/>

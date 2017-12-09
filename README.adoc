@@ -18,6 +18,7 @@ Interesting bits:
 * Using ifdef::backend-* when content is only needed for a specific backend
 * Including source code and linking to a generated Javadoc
 * Including images from sub-templates, with relative paths
+* Cross-section links
 
 To build the project:
 

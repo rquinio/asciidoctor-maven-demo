@@ -1,0 +1,26 @@
+= Links
+
+Demo linking across sections and documents.
+
+== Internal cross references
+
+ifdef::site[]
+Also refer to these other pages:
+
+* link:./source.html[Source code].
+* link:./sub-folder/sub.html[Sub-document].
+endif::[]
+
+ifndef::site[]
+Also refer to these other sections:
+
+* <<Source code>>
+* <<Sub-document>>
+endif::[]
+
+== Inter-document cross references
+
+Also refer to these documents:
+
+* <<slides/slides.adoc#,Slides>>
+* <<handbook/handbook.adoc#,Handbook>>

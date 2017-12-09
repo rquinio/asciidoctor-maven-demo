@@ -1,7 +1,6 @@
 = Presentation
 :author: Author
 :revdate: Date
-:customcss: slides.css
 
 image::images/asciidoctor.png[background, size=cover]
 
@@ -36,6 +35,9 @@ include::../diagrams.adoc[leveloffset=+1]
 
 [background-color="pink"]
 include::../sub-folder/sub.adoc[leveloffset=+1]
+
+[background-color="blue"]
+include::../links.adoc[leveloffset=+1]
 
 == Conclusion
 

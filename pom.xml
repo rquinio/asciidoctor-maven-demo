@@ -76,6 +76,9 @@
             <sourcedir>${basedir}/src/main/java</sourcedir>
             <imagesoutdir>${project.build.directory}/site</imagesoutdir>
             <siteurl>${project.url}</siteurl>
+            <sectlinks>true</sectlinks>
+            <sectanchors>true</sectanchors>
+            <sectnums>true</sectnums>
           </attributes>
           <requires>
             <require>asciidoctor-diagram</require>
@@ -135,6 +138,8 @@
                 <revealjs_theme>white</revealjs_theme>
                 <revealjs_transition>slide</revealjs_transition>
                 <revealjs_slideNumber>true</revealjs_slideNumber>
+                <revealjs_history>true</revealjs_history>
+                <customcss>slides.css</customcss>
               </attributes>
             </configuration>
           </execution>
