@@ -4,7 +4,7 @@ echo $TRAVIS_REPO_SLUG
 echo $TRAVIS_PULL_REQUEST
 echo $TRAVIS_BRANCH
 
-if [ "$TRAVIS_REPO_SLUG" == "rquinio/asciidoctor-maven-demo" ] && [ ${TRAVIS_PULL_REQUEST} == "false" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
+if [[ "$TRAVIS_REPO_SLUG" == "rquinio/asciidoctor-maven-demo" ]] && [[ ${TRAVIS_PULL_REQUEST} == "false" ]] && [[ "$TRAVIS_BRANCH" == "master" ]]; then
   echo -e "Publishing site to gh-pages branch...\n"
   
   cd target/site
