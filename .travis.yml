@@ -7,4 +7,4 @@ before_install:
 script: mvn site
 
 after_success: 
- - /bin/sh deploy.sh
+ - bash deploy.sh
