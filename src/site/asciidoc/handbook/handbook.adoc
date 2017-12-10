@@ -53,3 +53,6 @@ include::../sub-folder/sub.adoc[leveloffset=+1]
 include::../links.adoc[leveloffset=+1]
 
 <<<
+
+[index]
+== Index

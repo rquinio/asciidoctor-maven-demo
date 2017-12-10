@@ -7,22 +7,26 @@ Demo the inclusion of semantic diagrams.
 [graphviz, dot-example, svg]
 ----
 digraph g {
-    a -> b
-    b -> c
+    a -> b [ label="❶" ];
+    b -> c [ label="❷" ];
     c -> d
     d -> a
 }
 ----
+❶ From a to b
+
+❷ From b to c
 
 == Plantuml
 
 [plantuml, plantuml-example, png]
 ----
 @startuml
-Alice -> Bob: Authentication Request
+Alice -> Bob: Authentication Request ❶
 Bob --> Alice: Authentication Response
 
 Alice -> Bob: Another authentication Request
 Alice <-- Bob: another authentication Response
 @enduml
 ----
+❶ Uses SSL

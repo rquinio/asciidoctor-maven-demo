@@ -1,6 +1,6 @@
 = Admonitions
 
-Demo the display of icons as images or fonts.
+Demo the display of icons as images or fonts.((("admonitions")))((("fonts")))
 
 NOTE: Note
 

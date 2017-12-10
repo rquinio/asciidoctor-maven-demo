@@ -116,6 +116,8 @@
                 <pagenums />
                 <toc />
                 <title-logo-image>${basedir}/src/site/resources/images/asciidoctor.png</title-logo-image>
+                <!-- PDF default font-based icon is "fa" -->
+                <icon-set>fi</icon-set>
               </attributes>
             </configuration>
           </execution>
