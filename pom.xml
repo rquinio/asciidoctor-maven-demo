@@ -16,7 +16,7 @@
     <revealjs.version>3.5.0</revealjs.version>
     <asciidoctor-revealjs.version>1.0.4</asciidoctor-revealjs.version>
     <!-- Maven property exported as an ascidoc custom attribute -->
-    <awesome.version>1.2</awesome.version>
+    <awesome.version>1.3</awesome.version>
   </properties>
 
   <url>https://rquinio.github.io/asciidoctor-maven-demo</url>
