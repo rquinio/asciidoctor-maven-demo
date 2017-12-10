@@ -13,6 +13,7 @@ if [[ "$TRAVIS_REPO_SLUG" == "rquinio/asciidoctor-maven-demo" ]] && [[ ${TRAVIS_
   git config user.email "travis@travis-ci.org"
   git add .
   git commit -m "Deploy commit $TRAVIS_COMMIT to gh-pages"
-  git push --force --quiet -u "https://${GH_TOKEN}@github.com/rquinio/asciidoctor-maven-demo" gh-pages > /dev/null 2>&1
+  git checkout -b gh-pages
+  git push --force --quiet "https://${GH_TOKEN}@github.com/rquinio/asciidoctor-maven-demo" gh-pages > /dev/null 2>&1
 
 fi
