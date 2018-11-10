@@ -18,7 +18,7 @@ This is inspired by https://github.com/asciidoctor/asciidoctor-maven-examples[as
 * Using ifdef::backend-* when content is only needed for a specific backend
 * Including source code and linking to a generated Javadoc
 * Including images from sub-templates, with relative paths
-* Cross-section links
+* Cross-section/page links
 * Using unicode link:http://www.unicode.org/charts/beta/nameslist/n_2700.html[Dingbat circled digits] to simulate callouts in diagrams
 
 == Build

@@ -1,0 +1,5 @@
+[glossary]
+= Glossary
+
+[glossary]
+[[something]]Something:: A definition of something

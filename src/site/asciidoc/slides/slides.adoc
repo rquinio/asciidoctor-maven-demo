@@ -1,8 +1,13 @@
 = Presentation
 :author: Author
-:revdate: Date
 
 image::images/asciidoctor.png[background, size=cover]
+
+[.small]
+{revdate}
+
+[.small]
+{revnumber}
 
 [background-color="yellow"]
 == Keys
@@ -18,6 +23,7 @@ image::images/asciidoctor.png[background, size=cover]
 [NOTE.speaker]
 --
 You've unlocked the super secret notes area.
+
 Neat huh?
 --
 
