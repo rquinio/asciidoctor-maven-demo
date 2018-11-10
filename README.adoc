@@ -20,6 +20,7 @@ This is inspired by https://github.com/asciidoctor/asciidoctor-maven-examples[as
 * Including images from sub-templates, with relative paths
 * Cross-section/page links
 * Using unicode link:http://www.unicode.org/charts/beta/nameslist/n_2700.html[Dingbat circled digits] to simulate callouts in diagrams
+* Using link:https://asciidoctor.org/docs/user-manual/#docinfo-file[Docinfo files] and link:https://github.com/tscanlin/tocbot[tocdoc] to have an auto-expanded TOC
 
 == Build
 

@@ -96,6 +96,9 @@
               <outputDirectory>target/site/handbook</outputDirectory>
               <!-- Move out of /handbook folder -->
               <imagesDir>../</imagesDir>
+              <attributes>
+                <docinfo>shared</docinfo>
+              </attributes>
             </configuration>
           </execution>
           <execution>
