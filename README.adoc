@@ -8,6 +8,7 @@ A small example that demonstrates how http://asciidoctor.org/[Asciidoctor] can b
 * A single-page *https://rquinio.github.io/asciidoctor-maven-demo/handbook/handbook.html[HTML handbook]*, using https://github.com/asciidoctor/asciidoctor-maven-plugin[asciidoctor-maven-plugin]
 * A *https://rquinio.github.io/asciidoctor-maven-demo/handbook/handbook.pdf[PDF handbook]*, using https://github.com/asciidoctor/asciidoctor-pdf[asciidoctor-pdf]
 * A *https://rquinio.github.io/asciidoctor-maven-demo/slides/slides.html[reveal.js presentation]*, using https://github.com/asciidoctor/asciidoctor-reveal.js[asciidoctor-reveal.js]
+* and *link:./src/site/asciidoc/handbook/handbook.adoc[Github's rendering]*, based on link:https://github.com/github/markup[Github markup]
 
 This is inspired by https://github.com/asciidoctor/asciidoctor-maven-examples[asciidoctor-maven-examples], but rather than having multiple sub-modules, it generates multiple outputs inside a single project, re-using the same base material.
 
@@ -15,7 +16,7 @@ This is inspired by https://github.com/asciidoctor/asciidoctor-maven-examples[as
 
 * Fallbacking from fonts to images for admonition on the Maven site
 * Using leveloffset with includes, to integrate individual fragments
-* Using ifdef::backend-* when content is only needed for a specific backend
+* Using ifdef::backend-* when content is only needed for a specific backend, in particular for rendering on github (see https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74[some tips])
 * Including source code and linking to a generated Javadoc
 * Including images from sub-templates, with relative paths
 * Cross-section/page links
