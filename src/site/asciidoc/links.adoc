@@ -11,8 +11,8 @@ ifndef::site[]
 Also refer to these other sections:
 endif::[]
 
-* <<source.adoc#Source code, Source code>>
-* <<sub-folder/sub.adoc#Sub-document,Sub-document>>
+* <<source.adoc#_source_code,Source code>>
+* <<sub-folder/sub.adoc#_sub_document,Sub-document>>
 
 Glossary elements like <<glossary.adoc#something,something>>.
 

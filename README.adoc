@@ -29,11 +29,11 @@ To build the project:
 
 > mvn clean site
 
-WARNING: asciidoctor does not fail the build in case of errors or warnings.
+The build will fail in case of errors, warnings or infos reported by Asciidoctor.
 
 == Deployment
 
-The built maven site from master branch is automatically deployed to https://rquinio.github.io/asciidoctor-maven-demo:
+The built Maven site from master branch is automatically deployed to https://rquinio.github.io/asciidoctor-maven-demo:
 
 * Travis CI does a force push to the branch gh-pages, using a GitHub API key stored in Travis settings - see link:./deploy.sh[deploy.sh]
 * link:https://github.com/rquinio/rquinio.github.io[rquinio.github.io] repo uses a submodule pointing to gh-pages branch of this repo

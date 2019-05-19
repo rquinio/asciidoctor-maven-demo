@@ -12,10 +12,12 @@
     <maven.build.timestamp.format>dd-MM-yyyy</maven.build.timestamp.format>
     <project.slides.directory>${project.build.directory}/site/slides</project.slides.directory>
     <!-- Plugin versions -->
-    <asciidoctor-maven-plugin.version>1.5.7.1</asciidoctor-maven-plugin.version>
-    <asciidoctorj-diagram.version>1.5.10</asciidoctorj-diagram.version>
-    <revealjs.version>3.7.0</revealjs.version>
-    <asciidoctor-revealjs.version>1.1.3</asciidoctor-revealjs.version>
+    <asciidoctor-maven-plugin.version>2.0.0-RC.1</asciidoctor-maven-plugin.version>
+    <asciidoctorj.version>2.0.0</asciidoctorj.version>
+    <asciidoctorj-diagram.version>1.5.16</asciidoctorj-diagram.version>
+    <asciidoctorj-pdf.version>1.5.0-alpha.17</asciidoctorj-pdf.version>
+    <revealjs.version>3.8.0</revealjs.version>
+    <asciidoctor-revealjs.version>2.0.0</asciidoctor-revealjs.version>
     <!-- Maven property exported as an ascidoc custom attribute -->
     <awesome.version>1.3</awesome.version>
   </properties>
@@ -63,8 +65,15 @@
         <version>${asciidoctor-maven-plugin.version}</version>
         <configuration>
           <!-- Common configuration to all backends -->
-          <sourceHighlighter>coderay</sourceHighlighter>
+          <!-- Validate internal cross references -->
+          <enableVerbose>true</enableVerbose>
+          <logHandler>
+            <failIf>
+              <severity>INFO</severity>
+            </failIf>
+          </logHandler>
           <attributes>
+            <source-highlighter>coderay</source-highlighter>
             <coderay-css>class</coderay-css>
             <icons>font</icons>
             <revnumber>${project.version}</revnumber>
@@ -120,6 +129,8 @@
                 <title-logo-image>${basedir}/src/site/resources/images/asciidoctor.png</title-logo-image>
                 <!-- PDF default font-based icon is "fa" -->
                 <icon-set>fi</icon-set>
+                <pdf-stylesdir>${basedir}/src/site/resources/theme</pdf-stylesdir>
+                <pdf-style>custom</pdf-style>
               </attributes>
             </configuration>
           </execution>
@@ -144,6 +155,8 @@
                 <revealjs_slideNumber>true</revealjs_slideNumber>
                 <revealjs_history>true</revealjs_history>
                 <customcss>slides.css</customcss>
+                <!-- Defaults to backend name (.revealjs) -->
+                <outfilesuffix>.html</outfilesuffix>
               </attributes>
             </configuration>
           </execution>
@@ -151,8 +164,13 @@
         <dependencies>
           <dependency>
             <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj</artifactId>
+            <version>${asciidoctorj.version}</version>
+          </dependency>
+          <dependency>
+            <groupId>org.asciidoctor</groupId>
             <artifactId>asciidoctorj-pdf</artifactId>
-            <version>1.5.0-alpha.16</version>
+            <version>${asciidoctorj-pdf.version}</version>
           </dependency>
           <dependency>
             <groupId>org.asciidoctor</groupId>
@@ -186,10 +204,16 @@
             </requires>
           </asciidoc>
           <moduleExcludes>
+            <!-- Excludes fragments and documents rendered via asciidoctor-maven-plugin -->
             <asciidoc>**/_*.adoc,**/handbook/*.adoc,**/slides/*.adoc</asciidoc>
           </moduleExcludes>
         </configuration>
         <dependencies>
+          <dependency>
+            <groupId>org.asciidoctor</groupId>
+            <artifactId>asciidoctorj</artifactId>
+            <version>${asciidoctorj.version}</version>
+          </dependency>
           <!-- Asciidoctor Doxia Parser Module -->
           <dependency>
             <groupId>org.asciidoctor</groupId>
@@ -233,7 +257,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
-        <version>3.0.1</version>
+        <version>3.1.0</version>
       </plugin>
     </plugins>
   </reporting>
