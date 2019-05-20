@@ -193,8 +193,10 @@
               <awesome-version>${awesome.version}</awesome-version>
               <source-highlighter>coderay</source-highlighter>
               <coderay-css>style</coderay-css>
-              <icons>image</icons>
+              <icons />
+              <icontype>png</icontype>
               <sourcedir>${basedir}/src/main/java</sourcedir>
+              <imagesdir>images</imagesdir>
               <imagesoutdir>${project.build.directory}/site</imagesoutdir>
               <!-- Allows to differentiate backend-html5 site output -->
               <site>true</site>
