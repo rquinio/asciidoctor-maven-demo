@@ -1,0 +1,21 @@
+version: 2
+updates:
+- package-ecosystem: maven
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "04:00"
+  open-pull-requests-limit: 10
+  ignore:
+  - dependency-name: com.googlecode.maven-download-plugin:download-maven-plugin
+    versions:
+    - 1.6.1
+    - 1.6.2
+  - dependency-name: org.asciidoctor:asciidoctorj-diagram
+    versions:
+    - 2.1.0
+    - 2.1.1
+  - dependency-name: org.asciidoctor:asciidoctorj
+    versions:
+    - 2.4.2
+    - 2.4.3
